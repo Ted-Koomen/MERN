@@ -4,6 +4,8 @@ import App from './App';
 import './index.css';
 
 ReactDOM.render(
-  <App />,
+  <CommentBox
+    url='http://localhost:3001/api/comments'
+    pollInterval={2000} />
   document.getElementById('root')
 );
