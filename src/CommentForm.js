@@ -21,7 +21,13 @@ export default class CommentForm extends Component {
 
   handleSubmit(event) {
     event.preventDefault()
-    constole.log(`${this.state.author} said "${this.state.text}"`)
+    let author = this.state.author.trim();
+    let text = this.state.text.trim();
+    if (!text || !author){
+      return;
+    }
+    this.props.onCommentSubmit({ author: author, text: text });
+    this.setState({ author: '', text: ''})
   }
 
   render(){
