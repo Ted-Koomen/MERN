@@ -9,6 +9,9 @@ var router = express.Router();
 
 var port = process.env.API_PORT || 3001;
 
+//db config
+var mongoDB = 'mongodb://teddykoomen:Koomen21@ds127983.mlab.com:27983/commentstutorial'
+
 app.use(bodyParser.urlencoded( {extended: true}))
 app.use(bodyParser.json());
 
